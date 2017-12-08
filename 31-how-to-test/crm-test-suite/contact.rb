@@ -1,8 +1,5 @@
 class Contact
 
-  attr_reader :id
-  attr_accessor :first_name, :last_name, :email, :note
-
   @@contacts = []
   @@id = 1
 
@@ -61,6 +58,42 @@ class Contact
 
   def delete
     @@contacts.delete_if { |contact| contact.id == self.id }
+  end
+
+  def id
+    @id
+  end
+
+  def first_name
+    @first_name
+  end
+
+  def first_name=(new_fn)
+    @first_name = new_fn
+  end
+
+  def last_name
+    @last_name
+  end
+
+  def last_name=(new_ln)
+    @last_name = new_ln
+  end
+
+  def email
+    @email
+  end
+
+  def email=(new_email)
+    @email = new_email
+  end
+
+  def note
+    @note
+  end
+
+  def note=(new_note)
+    @notes = new_note
   end
 
 end
