@@ -33,7 +33,7 @@ Slides here: https://docs.google.com/presentation/d/15qjYctB823Jd3Bp7b89SiZkWXWf
 
 #### --- From this point on, bounce between slides and working through skeleton.js. examples.js is there as a reference if you need it.
 
-## Data types - 5 minutes
+## Data types - 15 minutes
 
   * different data types
   * use of `var`
@@ -45,29 +45,15 @@ Slides here: https://docs.google.com/presentation/d/15qjYctB823Jd3Bp7b89SiZkWXWf
   * Equality in JavaScript
     * use triple equals! (5 minutes - make this super clear)
 
-## Functions - how to write them - 10 minutes
-  * Call them functions instead of methods in JavaScript
-  * Function declaration
-  * Function expression
-  * Anonymous functions
-
-## Scope - 15 minutes
-
-  * Local (function based)
-  * Global
-    * `window.varname` (in the browser)
-    * `global.varname` (in node)
-    * declare a variable without `var`
-  * Always use `var`!!!
-
 
 #### --- 5-10 minute break here ---
 
-## Callbacks - 15 minutes
+## JavaScript Arrays - 15 minutes
 
-  * keep this very basic! Just an intro before a future lesson.
-  * Functions passed into other functions.
-    * Why would we want to do this? When we want to follow a set of instructions *later*.
+  * Exactly like arrays in Ruby!
+  * Use for-loop for iteration in the basic case
+  * There are other ways to iterate, but we need functions to do it!
+    * Will look at this tomorrow
 
 ## JavaScript Objects - 15 minutes
 
@@ -75,13 +61,12 @@ Slides here: https://docs.google.com/presentation/d/15qjYctB823Jd3Bp7b89SiZkWXWf
   * JSON (briefly) - just a notation!
   * Can do obj.attrName instead of obj['attrName'] - Ruby can't do this!
 
-## Asynchronous - 15 minutes
+## Intro to Functions - 5 minutes
 
-  * Keep this basic! Just an intro.
-  * Use timer example - we want this code to run later.
-  * Pass a callback to do it (just a function with instructions).
-  * Show that code will not run in order.
-
+  * Call them functions instead of methods in JavaScript
+  * Function declaration
+  * Function expression
+  * Anonymous functions
 
 ## Wrap-up - 5 minutes
 

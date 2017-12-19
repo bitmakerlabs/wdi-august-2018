@@ -39,3 +39,30 @@ As we dive deeper into JavaScript, our second programming language, we need to r
   - Passed as an argument to another function
   - Returned from a function
 - They're treated like all of the other basic data types (AKA primitive data types)
+
+## Functions - how to write them - 15 minutes
+
+  * Call them functions instead of methods in JavaScript
+  * Function declaration
+  * Function expression
+  * Anonymous functions
+
+## Scope - 15 minutes
+
+  * Local (function based)
+  * Global
+    * `window.varname` (in the browser)
+    * `global.varname` (in node)
+    * declare a variable without `var`
+  * Always use `var`!!!
+
+## Callbacks - 15 minutes
+
+  * Functions passed into other functions.
+    * Why would we want to do this? When we want to follow a set of instructions *later*.
+
+## Asynchronous - 15 minutes
+
+  * Use timer example - we want this code to run later.
+  * Pass a callback to do it (just a function with instructions).
+  * Show that code will not run in order.
