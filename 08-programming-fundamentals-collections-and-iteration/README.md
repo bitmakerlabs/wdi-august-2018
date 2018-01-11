@@ -178,16 +178,16 @@ When you remove a value from an array, the index of all the items after the remo
 irb > foods = [
 'Potato Bread',
 'French Fries',
-'Potato Eyes',
+'Onion Rings',
 'Potato Pizza',
 'Yams'
 ]
 
 # index:  0               1             2                3            4
-=> ["Potato Bread", "French Fries", "Potato Eyes", "Potato Pizza", "Yams"]
+=> ["Potato Bread", "French Fries", "Onion Rings", "Potato Pizza", "Yams"]
 
 irb > eat = foods.delete_at(2)
-=> "Potato Eyes"
+=> "Onion Rings"
 
 irb > foods
 
@@ -426,28 +426,28 @@ my_hash = {}
 Here's how to create a hash with values:
 
 ```ruby
-bobby = { :nose => 'big', :eyes => 'brown', :age => 21 }
+light = { :type => 'led', :duration => '1000 hours', :price => 1.99 }
 ```
 
 The `=>` is called a *hash rocket* as it's commonly used for create hashes and looks like a rocket.
 
 Each item in a hash must have both a `key` and a `value`. In the previous example:
 
-`:nose` is the key, `'big'` is the value
-`:eyes` is the key, `'brown'` is the value
-`:age` is the key, `21` is the value.
+`:type` is the key, `'led'` is the value
+`:duration` is the key, `'1000 hours'` is the value
+`:price` is the key, `1.99` is the value.
 
 Newer versions of Ruby support a more elegant syntax for creating hashes:
 
 ```ruby
-bobby = { nose: 'big', eyes: 'brown', age: 21 }
+light = { type: 'led', duration: '1000 hours', price: 1.99 }
 ```
 
-This example is identical to the first example. Even though the `nose` symbol is created with a `:` on the right side instead of the left side. When you read it back in irb, `nose` will be a symbol with the `:` on the left sie:
+This example is identical to the first example. Even though the `type` symbol is created with a `:` on the right side instead of the left side. When you read it back in irb, `type` will be a symbol with the `:` on the left sie:
 
 ```ruby
-irb > bobby = { nose: 'big', eyes: 'brown', age: 21 }
-=> {:nose=>"big", :eyes=>"brown", :age=>21}
+irb > light = { type: 'led', duration: '1000 hours' }
+=> {:type=>"led", :duration=>"1000 hours"}
 ```
 
 The newer `:` on the right side makes creating a hash in Ruby very similar to creating an object in JavaScript. In JavaScript, *objects* are similar to *hashes* in Ruby.
@@ -455,7 +455,7 @@ The newer `:` on the right side makes creating a hash in Ruby very similar to cr
 Symbols are often used as keys for a hash, but any Ruby object can be a key. For example, here's a similar method assignment using strings instead of symbols:
 
 ```ruby
-bobby = { 'nose' => 'big', 'eyes' => 'brown', 'age' => 21 }
+light = { 'type' => 'led', 'duration' => '1000 hours', 'price' => 1.99 }
 ```
 
 See how I used hash rockets for the assignments in the above example: if you aren't using symbols as keys, hash rockets must be used. If you are using symbols as keys, the best practice is to use a right-sided `:` for assignment.
@@ -465,8 +465,8 @@ See how I used hash rockets for the assignments in the above example: if you are
 To add a new key / value pair to an existing hash, access the hash using the variable name, and use `[]` along with an `=` to assign the value to the key:
 
 ```ruby
-irb > bobby = { nose: 'big', eyes: 'brown', age: 21 }
-irb > bobby[:hair] = 'nonexistent'
+irb > light = { type: 'led', duration: '1000 hours' }
+irb > light[:colour] = 'blue'
 ```
 
 ## Accessing Values
@@ -474,37 +474,37 @@ irb > bobby[:hair] = 'nonexistent'
 To obtain the value of a key, use `[]`:
 
 ```ruby
-irb > bobby = { nose: 'big', eyes: 'brown', age: 21 }
-irb > bobby[:eyes]
-=> "brown"
+irb > light = { type: 'led', duration: '1000 hours', price: 1.99 }
+irb > light[:duration]
+=> "duration"
 ```
 
 If you create your hash with strings instead of symbols, you'll need to access the values using the strings:
 
 ```ruby
-irb > bobby = { 'nose' => 'big', 'eyes' => 'brown', 'age' => 21 }
-=> {"nose"=>"big", "eyes"=>"brown", "age"=>21}
-irb > bobby['nose']
-=> "big"
-irb > bobby[:nose]
+irb > light = { 'type' => 'led', 'duration' => '1000 hours', 'price' => 1.99 }
+=> {"type"=>"led", "duration"=>"1000 hours", "price"=>1.99}
+irb > light['type']
+=> "led"
+irb > light[:type]
 => nil
 ```
 
-There is no `:nose` key in the above hash, so irb reports back `nil` as the value.
+There is no `:type` key in the above hash, so irb reports back `nil` as the value.
 
 ## Modifying Values
 
 Values can be overwritten using the same syntax as adding a new key / value pair:
 
 ```ruby
-irb > bobby = { nose: 'big', eyes: 'brown', age: 21, hair: 'nonexistent' }
-=> {:nose=>"big", :eyes=>"brown", :age=>21, :hair=>"nonexistent"}
+irb > light = { type: 'led', duration: '1000 hours', price: 1.99, colour: 'yellow' }
+=> {:type=>"led", :duration=>"duration", :price=>1.99, :colour=>"yellow"}
 
-irb > bobby[:hair] = 'long, brown mane'
-=> "long, brown mane"
+irb > light[:colour] = 'blue'
+=> "blue"
 
-irb > bobby
-=> {:nose=>"big", :eyes=>"brown", :age=>21, :hair=>"long, brown mane"}
+irb > light
+=> {:type=>"led", :duration=>"duration", :price=>1.99, :colour=>"blue"}
 ```
 
 ## Removing Values
@@ -512,43 +512,84 @@ irb > bobby
 You can set a value to `nil`, which in Ruby is a valid value that means *nothing*.
 
 ```ruby
-bobby[:hair] = nil
+light[:colour] = nil
 ```
 
 But you'll still have the key / value pair in your hash:
 
 ```ruby
-irb > bobby
-=> {:nose=>"big", :eyes=>"brown", :age=>21, :hair=>nil}
+irb > light
+=> {:type=>"led", :duration=>"duration", :price=>1.99, :colour=>nil}
 ```
 
 To remove the key / value from the hash, use `delete`:
 
 ```ruby
-bobby.delete(:hair)
+light.delete(:colour)
 ```
 
-## Nested Hashes
+# Nested Hashes
 
 It's common to nest hashes within hashes:
 
 ```ruby
-bobby =  { name: 'Bobby',  role: 'Instructor', features: { hair: 'wonderful', eyes: 'brown', age: 21, nose: 'big'     } }
-sasha = { name: 'Sasha', role: 'Instructor', features: { hair: 'curly',     eyes: 'brown', age: 15, nose: 'nice'    } }
-alice = { name: 'Alice', role: 'Student',    features: { hair: 'red',       eyes: 'blue',  age: 71, nose: 'massive' } }
-bob =   { name: 'Bob',   role: 'Student',    features: { hair: 'blonde',    eyes: 'green', age: 11, nose: 'lovely'  } }
 
-puts "#{alice[:name]} is the student and she has #{alice[:features][:hair]} hair."
+led = { type:     'led',
+        duration: '1000',
+        store:   { name: 'home depot', address: '1000 gerrard st', price: 1.99 } }
+
+incandescent = { type:     'incandescent',
+                 duration: '2000',
+                 store:   { name: 'roma', address: '22 yonge st', price: 7.77 } }
+
+fluorescent = { type:     'fluorescent',
+                duration: '3000',
+                store:   { name: 'toolshed', address: '1 bay st',  price: 8.00 } }
+
+halogen = { type: 'halogen',
+            duration: '8000',
+            store: { name: 'walmart', address: '383 bloor st w', price: 20.00 } }
+
 ```
 
-Notice we needed to access to Alice's hair colour by using two sets of square brackets: `alice[:features][:hair]`.
+To access a value within a nested hash, first we have to access the key of the outer hash. This retrieves its value, and then we have to access a key in this value to ultimately retrieve the value of the inner hash.
 
-`alice[:features]` returns the nested hash:
-`{ hair: 'red', eyes: 'blue',  age: 71, nose: 'massive' }`
+We do this by doubling-up the square brackets beside each other:
 
-We then take that returned hash and add `[:hair]` to access he value under that key in the returned hash:
+```ruby
 
-`alice[:features][:hair]` which ultimately returns `"red"`.
+led = { type:     'led',
+        duration: '1000',
+        store:   { name: 'home depot', address: '1000 gerrard st', price: 1.99 } }
+
+price = led[:store][:price]
+
+puts "#{led[:store]} is the store and it costs $#{price}."
+```
+
+Notice we needed to access the light bulb's store's price by using two sets of square brackets: `led[:store][:price]`.
+
+`led[:store]` returns the nested hash:
+`{ name: 'home depot', address: '1000 gerrard st', price: 1.99 }`
+
+```ruby
+
+led = { type:     'led',
+        duration: '1000',
+        store:   { name: 'home depot', address: '1000 gerrard st', price: 1.99 } }
+
+price = led[:store][:price]
+
+puts "#{led[:store]} is the store and it costs $#{price}."
+```
+
+`led[:store]` returns the nested hash:
+
+`{ name: 'home depot', address: '1000 gerrard st', price: 1.99 }`
+
+We then take that returned hash and add `[:price]` to access the value under that key in the returned hash:
+
+`led[:store][:price]` which ultimately returns `"1.99"`.
 
 To get the `keys` of a hash, use `.keys`:
 
@@ -645,7 +686,7 @@ page = {
   body: [
     { h1: { content: 'Cat Ipsum' } },
     { p: { content: 'Hide head under blanket so no one can see. Proudly present butt to human. Then cats take over the world kitty loves pigs.',
-           attributes: [id: 'leading', class: ['inverted', 'big']] } }
+           attributes: [id: 'leading', class: ['inverted', 'led']] } }
   ]
 }
 ```
