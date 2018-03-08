@@ -1,4 +1,4 @@
-class CreateReservations < ActiveRecord::Migration
+class CreateReservations < ActiveRecord::Migration[5.0]
   def change
     create_table :reservations do |t|
       t.datetime :begin_time
@@ -9,7 +9,5 @@ class CreateReservations < ActiveRecord::Migration
 
       t.timestamps
     end
-    add_index :reservations, :restaurant_id
-    add_index :reservations, :user_id
   end
 end

@@ -1,4 +1,4 @@
-class CreateRestaurants < ActiveRecord::Migration
+class CreateRestaurants < ActiveRecord::Migration[5.0]
   def change
     create_table :restaurants do |t|
       t.string :name
@@ -10,6 +10,5 @@ class CreateRestaurants < ActiveRecord::Migration
 
       t.timestamps
     end
-    add_index :restaurants, :category_id
   end
 end

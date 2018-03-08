@@ -1,4 +1,4 @@
-class RemoveEndTimeFromReservation < ActiveRecord::Migration
+class RemoveEndTimeFromReservation < ActiveRecord::Migration[5.0]
   def up
     remove_column :reservations, :end_time
   end

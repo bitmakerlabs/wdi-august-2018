@@ -1,4 +1,4 @@
-class RemoveCapacityFromRestaurant < ActiveRecord::Migration
+class RemoveCapacityFromRestaurant < ActiveRecord::Migration[5.0]
   def up
     remove_column :restaurants, :capacity
   end

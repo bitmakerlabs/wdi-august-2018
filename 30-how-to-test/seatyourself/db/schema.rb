@@ -13,44 +13,44 @@
 ActiveRecord::Schema.define(version: 20170620003125) do
 
   create_table "categories", force: :cascade do |t|
-    t.string   "name"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "reservations", force: :cascade do |t|
     t.datetime "begin_time"
-    t.integer  "restaurant_id"
-    t.integer  "user_id"
-    t.text     "notes"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.integer  "people",        default: 1
+    t.integer "restaurant_id"
+    t.integer "user_id"
+    t.text "notes"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "people", default: 1
     t.index ["restaurant_id"], name: "index_reservations_on_restaurant_id"
     t.index ["user_id"], name: "index_reservations_on_user_id"
   end
 
   create_table "restaurants", force: :cascade do |t|
-    t.string   "name"
-    t.string   "address"
-    t.string   "phone"
-    t.string   "picture"
-    t.text     "description"
-    t.integer  "category_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.integer  "capacity",     default: 100
-    t.float    "latitude"
-    t.float    "longitude"
-    t.integer  "opening_hour"
-    t.integer  "closing_hour"
+    t.string "name"
+    t.string "address"
+    t.string "phone"
+    t.string "picture"
+    t.text "description"
+    t.integer "category_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "capacity", default: 100
+    t.float "latitude"
+    t.float "longitude"
+    t.integer "opening_hour"
+    t.integer "closing_hour"
     t.index ["category_id"], name: "index_restaurants_on_category_id"
   end
 
   create_table "users", force: :cascade do |t|
-    t.string   "name"
-    t.string   "email"
-    t.string   "password_digest"
+    t.string "name"
+    t.string "email"
+    t.string "password_digest"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
