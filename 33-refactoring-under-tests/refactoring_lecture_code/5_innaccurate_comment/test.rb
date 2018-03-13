@@ -10,6 +10,6 @@ class DeadCodeTest < Minitest::Test
     Car.stub(:new, car) do
       Driver.new.car_routine
     end
-    car.verify
+    assert car.verify
   end
 end
