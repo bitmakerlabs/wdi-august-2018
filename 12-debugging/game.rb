@@ -24,11 +24,11 @@ class Game
       new_x = moves.sample
       new_y = moves.sample
 
-      if new_x >= 0 && new_x < width
+      if new_x >= 0 && new_x < @width
         player.x += new_x
       end
 
-      if new_y >= 0 && new_y < height
+      if new_y >= 0 && new_y < @height
         player.y += new_y
       end
     end
