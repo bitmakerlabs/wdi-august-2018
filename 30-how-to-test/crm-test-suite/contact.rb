@@ -93,7 +93,7 @@ class Contact
   end
 
   def note=(new_note)
-    @notes = new_note
+    @note = new_note
   end
 
 end
