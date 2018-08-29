@@ -8,18 +8,62 @@
 /* BASIC SELECTORS */
 
 /* Tag selectors */
+p.fancy {
+  font-style: italic;
+  background-color: #33AD19;
+  background-color: lightblue;
+}
+
+p {
+  background-color: red;
+  padding: 25px;
+  margin: 25px;
+}
+
+p {
+  margin: 4px;
+}
+
 
 
 /* Class selectors */
 
 
+
+
 /* ID selectors */
+#hero-unit {
+  font-size: 30px;
+}
+
+.hero {
+  font-size: 1px;
+}
+
+section {
+
+}
 
 
 
 /* ADVANCED SELECTORS */
 
 /* Combining selectors */
+div label {
+  border: 1px solid black;
+}
 
+section > article > p {
+  border: 5px dotted green;
+}
+
+section p.fancy {
+  font-size: 20px;
+  font-family: arial;
+}
+
+article p {
+
+}
 
 /* Pseudo-selectors */
