@@ -37,7 +37,7 @@ tablet to desktop.
 - What units do we want to use here?
 
 
-## Responsive design is HARD
+## Responsive design is ~HARD~ *FUN!*
 - Grids
   - What techniques can we use to adapt our grids to different devices?
   - This is called a fluid grid system, which we'll look at next time

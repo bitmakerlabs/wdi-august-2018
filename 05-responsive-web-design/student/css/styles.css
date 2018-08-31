@@ -37,15 +37,134 @@ body {
 	padding: 0;
 }
 
-.clearfix:after {
-	content: '';
-	display: table;
-	clear: both;
-}
 
 /* -------------------------------------------------- */
 /* BASE STYLES */
 /* -------------------------------------------------- */
-/*
- Write *YOUR* styles here!
-*/
+
+
+body {
+	background-color: #eee;
+	color: #222;
+	font-family: georgia, 'times new roman', serif;
+	font-size: 1.125em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: helvetica, arial, sans-serif;
+}
+
+p {
+	line-height: 1.5;
+}
+
+img {
+	max-width: 100%;
+}
+
+/* -------------------------------------------------- */
+/* HEADER STYLES */
+/* -------------------------------------------------- */
+
+.brand {
+	text-align: center;
+	font-size: 1em;
+}
+
+.brand-main {
+	font-size: 1.5em;
+	color: darkslateblue;
+}
+
+.brand-supporting {
+	display: none;
+}
+
+.post div {
+	padding: 1em;
+}
+
+
+/* -------------------------------------------------- */
+/* MAIN STYLES */
+/* -------------------------------------------------- */
+
+.intro {
+	display: none;
+}
+
+.post h2 {
+	font-size: 2em;
+}
+
+.post h2 a {
+	color: darkslateblue;
+	text-decoration: none;
+}
+
+
+/* -------------------------------------------------- */
+/* FOOTER STYLES */
+/* -------------------------------------------------- */
+
+
+
+
+
+
+
+
+/* -------------------------------------------------- */
+/* MEDIA QUERIES!!!! */
+/* -------------------------------------------------- */
+
+@media screen and (min-width: 720px) {
+
+
+	.brand {
+		text-align: left;
+		padding: 0 1em;
+	}
+
+	.brand-supporting {
+		display: inline-block;
+		color: #999;
+	}
+
+
+	.post-wrapper {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-gap: 1em;
+		padding: 0 1em;
+	}
+
+	.post {
+		background-color: #fff;
+		border: 1px solid #ccc;
+	}
+
+
+}
+
+
+@media screen and (min-width: 1000px) {
+
+	.intro {
+		display: block;
+	}
+
+	.post-wrapper {
+		grid-template-columns: 1fr 1fr 1fr;
+	}
+
+}
+
+
+
+
+
+
+
+
+/* the end */
