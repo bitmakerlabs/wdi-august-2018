@@ -1,0 +1,21 @@
+Advantages of OOP
+
+1) Encapsulation
+  - Allows us to "classify" concepts
+
+2) Information Hiding
+  - States are private by default
+  - Access state via behaviours
+
+3) Abstraction
+  - The internals of an object is irrelevant to its user
+
+Class
+
+- Blueprint for making instances
+
+
+Object     |   State                | Behaviour
+-----------+------------------------+------------------------
+Instance   | Instance Variables (@) | Instance Methods (def)
+????       | ????                   | ????
