@@ -1,3 +1,4 @@
+require 'pry'
 class Rover
 
   def initialize(x, y, dir)
@@ -65,12 +66,12 @@ class Rover
   end
 
   def report_position
-    return "I am at #{@x}, #{@y} facing #{@direction}"
+    return "I am at #{@x}, #{@y} facing #{@dir}"
   end
 
 end
 
-rover = Rover.new(0,0,'n')
+rover = Rover.new(0,0,'N')
 puts rover.report_position
 rover.read_instructions
 puts rover.report_position

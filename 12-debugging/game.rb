@@ -1,8 +1,17 @@
+require_relative 'player'
+require 'pry'
 class Game
 
+
   def initialize(number_of_players)
+    @width = rand(5..20)
+    @height = rand(5..20)
+    @players = []
+
     number_of_players.times do
-      @players << Player.new((0..@width).sample, (0..@height).sample)
+      x_position = rand(0..@width)
+      y_position = rand(0..@height)
+      @players << Player.new(x_position, y_position)
     end
   end
 
@@ -11,9 +20,8 @@ class Game
     print "How many people are adventuring? "
     number_of_players = gets.chomp.to_i
 
-    g = Game.new(number_of_players)
+    game = Game.new(number_of_players)
     game.turn
-    end
   end
 
   def turn
