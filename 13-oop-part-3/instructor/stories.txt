@@ -1,0 +1,32 @@
+MUST HAVE
+As a user, I should be able to see a list of contacts, so that I can choose one
+As a user, I should be able to add a new contact
+As a user, I should be able to add email(s) to a contact
+As a user, I should be able to find (one) a contact
+As a user, I should be able to see the details of a particular contact
+
+SHOULD HAVE
+As a user, I should be able to edit a contact
+As a user, I should be able to delete a contact
+As a user, I should be able to add phone number(s) to a contact
+
+COULD HAVE
+As a user, I should be able to group contacts
+As a user, I should be able to add a photo to a contact
+As a user, I should be able to sort contacts
+As a user, I should be able to search (many) for a contact, so that ...
+
+WONT HAVE
+As a user, I should be able to export my contact list
+As a user, I should be able to import my contact list
+As a user, I should be able to see a history of my contacts with the contact
+As a user, I should be able to "protect" the list of contacts
+As a user, I should be able to block a contact
+
+
+
+
+Object     | State                    | Behaviour
+-----------+--------------------------+-------------------------------------
+Instance   | Instance Variables (@)   | Instance Methods (def something)
+Class      | Class Variables (@@)     | Class Methods (def self.something)
