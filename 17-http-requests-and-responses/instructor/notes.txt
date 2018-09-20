@@ -1,0 +1,9 @@
+
+          REQUEST                                       RESPONSE
+
+          Request Line      | Header     | Body         Status   | Header     | Body
+          ------------------+------------+------------  ---------+------------+-----------
+(R)ead    GET  + URL        | Y          | N             Y       | Y          | Y
+(C)reate  POST + URL        | Y          | Y             Y       | Y          | Maybe
+(U)pdate  PATCH (PUT) + URL | Y          | Y             Y       | Y          | Maybe
+(D)elete  DELETE + URL      | Y          | N             Y       | Y          | Maybe

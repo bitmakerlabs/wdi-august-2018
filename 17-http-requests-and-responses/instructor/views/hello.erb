@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>Hello!!!!</h1>
+
+    <ul>
+      <% @todo_list.each do |item| %>
+      <li><%= item %></li>
+      <% end %>
+    </ul>
+
+    <p>
+      <%= @current_time %>
+    </p>
+  </body>
+</html>
