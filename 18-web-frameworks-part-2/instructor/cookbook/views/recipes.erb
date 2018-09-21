@@ -1,3 +1,11 @@
 <h1><%= @title %></h1>
 
-List of recipes go here...
+<ul>
+  <% @recipes.each do |id, name| %>
+    <li>
+      <%= id %>
+      -
+      <%= name %>
+    </li>
+  <% end %>
+</ul>

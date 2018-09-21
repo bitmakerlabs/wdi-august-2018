@@ -21,5 +21,13 @@ end
 
 get '/recipes' do
   @title = 'Recipes'
+
+  # Notice that the Keys are integers
+  @recipes = {
+    1 => 'Avocado sushi',
+    2 => 'BBQ Ribs',
+    3 => 'Gluten-Free Cookies'
+  }
+
   erb :recipes
 end
