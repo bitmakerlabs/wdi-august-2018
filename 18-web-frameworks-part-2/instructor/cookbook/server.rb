@@ -32,14 +32,26 @@ get '/recipes' do
   erb :recipes
 end
 
-get '/recipes/1' do
-  erb :recipe_1
+get '/recipes/:id' do
+  id = params[:id]
+
+  if id == '1'
+    erb :recipe_1
+  elsif id == '2'
+    erb :recipe_2
+  elsif id == '3'
+    erb :recipe_3
+  end
 end
 
-get '/recipes/2' do
-  erb :recipe_2
-end
-
-get '/recipes/3' do
-  erb :recipe_3
-end
+# get '/recipes/1' do
+#   erb :recipe_1
+# end
+#
+# get '/recipes/2' do
+#   erb :recipe_2
+# end
+#
+# get '/recipes/3' do
+#   erb :recipe_3
+# end
