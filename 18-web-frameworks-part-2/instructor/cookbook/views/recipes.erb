@@ -1,10 +1,10 @@
 <h1><%= @title %></h1>
 
 <ul>
-  <% @recipes.each do |id, name| %>
+  <% @recipes.each do |recipe| %>
     <li>
-      <a href="/recipes/<%= id %>">
-        <%= name %>
+      <a href="/recipes/<%= recipe.id %>">
+        <%= recipe.name %>
       </a>
     </li>
   <% end %>
