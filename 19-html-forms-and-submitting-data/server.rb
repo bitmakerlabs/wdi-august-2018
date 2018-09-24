@@ -7,11 +7,22 @@ get '/' do
 end
 
 get '/films' do
-  "GET request: #{params}"
+  # "GET request: #{params}"
+  erb :index
 end
 
 post '/films' do
-  "POST request: #{params}"
+  # "POST request: #{params}"
+  @film = Film.new(
+    title: params['title'],
+    description: params['description'],
+    country: params['country'],
+    rating: params['rating']
+  )
+
+  @film.save
+
+  redirect to('/films')
 end
 
 put '/films' do
