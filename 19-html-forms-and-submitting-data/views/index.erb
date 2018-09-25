@@ -9,38 +9,117 @@
 <form class="new-film" action="/films" method="post">
   <div>
     <!-- input type: text -->
+    <label for="film-title">Title</label>
+    <input type="text" name="title" id="film-title" placeholder="e.g Jaws" />
   </div>
 
   <div>
     <!-- input types: date / time / email / tel / url / color / range / number / search -->
+    <label for="film-year">Year</label>
+    <input type="number" name="year" id="film-year">
   </div>
 
   <div>
     <!-- textarea -->
+    <label for="film-description">Description</label>
+    <textarea name="description" id="film-description" placeholder="Describe the film">Best film ever</textarea>
   </div>
 
   <div>
   <!-- input radio -->
+    <fieldset>
+      <legend>Rating</legend>
+
+      <label>
+        <input type="radio" name="rating" value="1">
+        <span>1</span>
+      </label>
+
+      <label>
+        <input type="radio" name="rating" value="2">
+        <span>2</span>
+      </label>
+
+      <label>
+        <input type="radio" name="rating" value="3">
+        <span>3</span>
+      </label>
+
+      <label>
+        <input type="radio" name="rating" value="4">
+        <span>4</span>
+      </label>
+
+      <label>
+        <input type="radio" name="rating" value="5">
+        <span>5</span>
+      </label>
+    </fieldset>
   </div>
 
   <div>
   <!-- input checkbox -->
+    <fieldset>
+      <legend>Genre</legend>
+
+      <label>
+        <input type="checkbox" name="genre[]" value="adventure">
+        <span>Adventure</span>
+      </label>
+
+      <label>
+        <input type="checkbox" name="genre[]" value="drama">
+        <span>Drama</span>
+      </label>
+
+      <label>
+        <input type="checkbox" name="genre[]" value="romance">
+        <span>Romance</span>
+      </label>
+
+      <label>
+        <input type="checkbox" name="genre[]" value="horror">
+        <span>Horror</span>
+      </label>
+
+      <label>
+        <input type="checkbox" name="genre[]" value="comedy">
+        <span>Comedy</span>
+      </label>
+    </fieldset>
   </div>
 
 
   <div>
     <!-- select / option -->
+    <label for="film-country">Country</label>
+    <select id="film-country" name="country">
+      <option value="">Please choose a country</option>
+      <option value="CA">Canada</option>
+      <option value="US">USA</option>
+      <option value="JP">Japan</option>
+      <option value="MX">Mexico</option>
+      <option value="FR">France</option>
+    </select>
   </div>
 
 
   <div>
     <!-- file -->
+    <label for="film-poster">Poster</label>
+    <input type="file" name="poster" id="film-poster">
   </div>
 
   <!-- hidden -->
+  <input type="hidden" name="_method" value="delete">
 
   <div>
     <!-- input submit / button -->
+    <!-- <input type="submit" value="Save"> -->
+
+    <button type="submit">
+      <h2>Go!</h2>
+    </button>
   </div>
 
 </form>
