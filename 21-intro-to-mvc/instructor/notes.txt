@@ -1,0 +1,6 @@
+
+Thing          | S/P      | Example Name       | Example File Name
+---------------+----------+--------------------+--------
+Model          | Singular | Product            | product.rb
+Database Table | Plural   | products           | N/A
+Controller     | Plural   | ProductsController | products_controller.rb
