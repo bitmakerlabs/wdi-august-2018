@@ -1,0 +1,8 @@
+
+<h1>All Movies</h1>
+
+<% @movies.each do |movie| %>
+  <p>
+    <%= movie.title %>, runtime: <%= movie.runtime %>
+  </p>
+<% end  %>
