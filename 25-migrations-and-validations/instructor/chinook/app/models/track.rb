@@ -24,4 +24,8 @@ class Track < ApplicationRecord
     where('milliseconds >= ?', length)
   end
 
+  def self.starts_with(char)
+    where("name ILIKE ?", "#{ char }%")
+  end
+
 end
