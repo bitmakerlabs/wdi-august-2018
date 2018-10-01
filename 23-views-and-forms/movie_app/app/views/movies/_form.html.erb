@@ -1,0 +1,22 @@
+
+<%= form_for movie_for_form do |helper| %>
+  <p>
+    Title: <%= helper.text_field :title %>
+  </p>
+
+  <p>
+    Genre: <%= helper.text_field :genre %>
+  </p>
+
+  <p>
+    Year of release: <%= helper.number_field :release_year %>
+  </p>
+
+  <p>
+    Runtime: <%= helper.number_field :runtime %>
+  </p>
+
+  <p>
+    <%= helper.submit %>
+  </p>
+<% end %>

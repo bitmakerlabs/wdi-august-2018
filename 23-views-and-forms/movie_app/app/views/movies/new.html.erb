@@ -1,0 +1,60 @@
+
+<h1>Create a new movie</h1>
+
+<h2>Regular HTML Form</h2>
+
+  <form action="/movies" method="post">
+    <p>
+      Title: <input type="text" name="title" value="">
+    </p>
+
+    <p>
+      Genre: <input type="text" name="genre" value="">
+    </p>
+
+    <p>
+      Year of release: <input type="number" name="release_year" value="">
+    </p>
+
+    <p>
+      Runtime: <input type="number" name="runtime" value="">
+    </p>
+
+    <p>
+      <input type="submit" value="Create movie">
+    </p>
+</form>
+
+
+<hr>
+
+<h2>form_tag</h2>
+
+<%= form_tag('/movies', method: 'post') do %>
+  <p>
+    Title: <%= text_field_tag :title %>
+  </p>
+
+  <p>
+    Genre: <%= text_field_tag :genre %>
+  </p>
+
+  <p>
+    Year of release: <%= number_field_tag :release_year %>
+  </p>
+
+  <p>
+    Runtime: <%= number_field_tag :runtime %>
+  </p>
+
+  <p>
+    <%= submit_tag 'Create movie' %>
+  </p>
+<% end %>
+
+
+<hr>
+
+<h2>form_for</h2>
+
+<%= render 'form', movie_for_form: @new_movie %>
