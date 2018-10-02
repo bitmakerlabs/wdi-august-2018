@@ -6,4 +6,7 @@ class Picture < ActiveRecord::Base
 
   # now we can do this:
   # Picture.last.comments
+
+  has_and_belongs_to_many :tags
+  # there a pictures_tags join table representing your M-M relationship with tags
 end
