@@ -1,9 +1,8 @@
 Rails.application.routes.draw do
-  get 'users/new'
-  get 'users/create'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
-  resources :products, only: [:index]
+  resources :products, only: %i(index)
+  resource :users, only: %i(new create)
 
   root 'products#index'
 end
