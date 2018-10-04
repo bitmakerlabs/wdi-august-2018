@@ -18,6 +18,10 @@ class SessionsController < ApplicationController
   end
 
   def destroy
+    # Cut the wristband
+    session[:user_id] = nil
+
+    #flash: 'Successfully logged out'
   end
 end
 
@@ -25,3 +29,6 @@ end
 # params
 # flash
 # session
+
+# In the view, use _path
+# In the controller, use _url

@@ -17,7 +17,7 @@
     %>
 
     <% if user_is_logged_in %>
-      <%= link_to 'Log Out', root_path %>
+      <%= link_to 'Log Out', sessions_path, method: :delete %>
     <% else %>
       <%= link_to 'Sign Up', new_users_path %>
       |
