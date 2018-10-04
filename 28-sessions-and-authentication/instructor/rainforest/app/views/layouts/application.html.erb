@@ -10,6 +10,20 @@
   </head>
 
   <body>
+    <%
+      def user_is_logged_in
+        false
+      end
+    %>
+
+    <% if user_is_logged_in %>
+      <%= link_to 'Log Out', root_path %>
+    <% else %>
+      <%= link_to 'Sign Up', new_users_path %>
+      |
+      <%= link_to 'Log In', new_sessions_path %>
+    <% end %>
+
     <%= yield %>
   </body>
 </html>
