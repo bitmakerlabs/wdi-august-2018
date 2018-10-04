@@ -22,6 +22,7 @@ class SessionsController < ApplicationController
     session[:user_id] = nil
 
     #flash: 'Successfully logged out'
+    redirect_to root_url
   end
 end
 
