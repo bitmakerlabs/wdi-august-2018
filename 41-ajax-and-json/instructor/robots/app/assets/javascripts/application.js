@@ -13,3 +13,8 @@
 //= require rails-ujs
 //= require turbolinks
 //= require_tree .
+//= require axios
+
+// document.addEventListener('DOMContentLoaded', function() {
+  // axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
+// });

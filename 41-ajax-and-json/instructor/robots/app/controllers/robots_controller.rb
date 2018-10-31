@@ -9,6 +9,20 @@ class RobotsController < ApplicationController
   def show
     # We don't need to load the robot here, it's done in the load_robot method
     # @robot = Robot.find(params[:id])
+    if request.xhr?
+    #   # render partial: 'robots/robot', layout: false
+    #   render json: @robot
+    # else
+    #   render :show
+    # end
+
+    @robot = Robot.find(params[:id])
+    respond_to do |format|
+      # format.html
+      format.json do
+        render json: @robot
+      end
+    end
   end
 
   private
