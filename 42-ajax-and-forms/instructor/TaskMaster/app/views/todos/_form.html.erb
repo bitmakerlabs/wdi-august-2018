@@ -1,0 +1,8 @@
+<%= form_for(@todo) do |f| %>
+
+<%= f.label :Content %>
+<%= f.text_area(:content, size: '50x10') %>
+
+<%= f.submit data: {disable_with: false} %>
+
+<% end %>
